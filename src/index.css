@@ -1,0 +1,395 @@
+/* index.css */
+
+/* Algemene basisstijl */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2;
+  color: #222;
+}
+
+/* Container voor pagina’s */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Navigatiebalk */
+nav {
+  background-color: #ef5350; /* rood Pokémon gevoel */
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+}
+
+nav a {
+  color: white;
+  margin-right: 20px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Pagina titels */
+h1 {
+  font-size: 28px;
+  margin: 20px 0 10px 0;
+}
+
+p {
+  line-height: 1.5;
+}
+
+/* Pokémon lijst */
+ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 15px;
+}
+
+li {
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 15px;
+  text-align: center;
+  border-radius: 8px;
+  transition: transform 0.2s;
+}
+
+li:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+li a {
+  color: #ef5350;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* Detailpagina - kaart */
+.pokemon-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin: 30px auto;
+  max-width: 500px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.pokemon-card img {
+  display: block;
+  margin: 15px auto;
+  width: 150px;
+  height: 150px;
+}
+
+/* Type labels */
+.type-label {
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 3px;
+  border-radius: 15px;
+  font-size: 14px;
+  color: white;
+}
+
+/* Kleurcodes per type */
+.type-grass { background-color: #78C850; }
+.type-fire { background-color: #F08030; }
+.type-water { background-color: #6890F0; }
+.type-electric { background-color: #F8D030; color: #222; }
+.type-bug { background-color: #A8B820; }
+.type-normal { background-color: #A8A878; }
+.type-poison { background-color: #A040A0; }
+.type-ground { background-color: #E0C068; color: #222; }
+.type-fairy { background-color: #EE99AC; }
+.type-fighting { background-color: #C03028; }
+.type-psychic { background-color: #F85888; }
+.type-rock { background-color: #B8A038; }
+.type-ghost { background-color: #705898; }
+.type-ice { background-color: #98D8D8; color: #222; }
+.type-dragon { background-color: #7038F8; }
+
+
+/* Homepagina */
+.home {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.home-banner img {
+  max-width: 200px;
+  margin-bottom: 20px;
+}
+
+.home p {
+  font-size: 18px;
+  margin: 15px 0;
+  color: #555;
+}
+
+/* Call-to-action knop */
+.btn {
+  display: inline-block;
+  background-color: #ef5350;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.btn:hover {
+  background-color: #d32f2f;
+}
+
+
+
+/* Extra info op Detailpagina */
+.pokemon-extra {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 600px;
+  border-radius: 10px;
+}
+
+.pokemon-extra h2 {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: #333;
+}
+
+/* Abilities lijst */
+.pokemon-extra ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.pokemon-extra li {
+  background: #f8f8f8;
+  padding: 8px 12px;
+  margin-bottom: 5px;
+  border-radius: 6px;
+  text-transform: capitalize;
+}
+
+/* Stats */
+.stats-list li {
+  margin-bottom: 10px;
+}
+
+.stat-name {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 4px;
+  text-transform: capitalize;
+}
+
+.stat-bar {
+  background: #eee;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 20px;
+}
+
+.stat-fill {
+  background: #ef5350;
+  height: 100%;
+  color: white;
+  font-size: 12px;
+  padding-left: 5px;
+  line-height: 20px;
+}
+
+
+/* Detail layout - 2 kolommen */
+.detail-layout {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap; /* zorgt dat ze onder elkaar komen op mobiel */
+}
+
+.detail-layout .pokemon-card,
+.detail-layout .pokemon-extra {
+  flex: 1 1 300px; /* groeit en krimpt met minimum breedte */
+  max-width: 500px;
+}
+
+/* Zoekbalk */
+.search-input {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px 15px;
+  margin: 15px 5px 25px 5px;
+  border: 2px solid #ddd;
+  border-radius: 25px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.search-input:focus {
+  border-color: #ef5350;
+  box-shadow: 0 0 6px rgba(239, 83, 80, 0.5);
+}
+
+
+.type-filter {
+  padding: 10px 15px;
+  margin: 10px 0 20px 0;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  background: white;
+  cursor: pointer;
+}
+
+.type-filter:focus {
+  border-color: #ef5350;
+  box-shadow: 0 0 6px rgba(239, 83, 80, 0.5);
+}
+
+
+/* Filter bar styling */
+.filter-bar {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+/* Favorieten checkbox */
+.favorite-filter {
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  user-select: none;
+  color: #333;
+}
+
+.favorite-filter input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.favorite-filter .checkmark {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  transition: 0.2s;
+}
+
+/* Hover effect */
+.favorite-filter:hover input ~ .checkmark {
+  background-color: #f2f2f2;
+}
+
+/* Checked state */
+.favorite-filter input:checked ~ .checkmark {
+  background-color: #ef5350;
+  border-color: #ef5350;
+}
+
+/* Checkmark (vinkje) */
+.favorite-filter .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.favorite-filter input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.favorite-filter .checkmark:after {
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+
+.team-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.team-card {
+  background: white;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.team-card h2 {
+  margin: 0 0 10px 0;
+}
+
+.pokemon-list.small {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pokemon-list.small li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+
+.btn.small {
+  padding: 5px 10px;
+  font-size: 12px;
+  margin-left: 10px;
+}
+
+
+.pokemon-list li {
+  position: relative;
+}
+
+.pokemon-list li a {
+  display: block;
+  text-align: center;
+  z-index: 1; /* link staat boven achtergrond */
+}
+
+.pokemon-list li button,
+.pokemon-list li select {
+  position: relative;
+  z-index: 2; /* buttons boven link */
+}
